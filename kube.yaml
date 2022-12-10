@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wedding
+spec:
+  type: NodePort
+  selector:
+    app: wedding
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: wedding
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wedding
+  template:
+    metadata:
+      labels:
+        app: wedding
+    spec:
+      terminationGracePeriodSeconds: 31
+      containers:
+        - name: wedding
+          image: docker.raqeebwedsrabeeta.live:5000/myprojects/wedding
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
