@@ -9,7 +9,7 @@ A simple, responsive, easy-to-edit wedding website template.
 The project is comprised of the following:
 
 - `index.html` - Content
-- `theme.css` - CSS Styling
+- `theme.css` - CSS Styling test
 - `/img` - Images
 - `/js` - External Scripts (Smooth-scrolling)
 - `/icons` - FontAwesome's Icon Library (See below for more details)
