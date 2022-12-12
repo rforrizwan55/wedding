@@ -25,7 +25,7 @@ spec:
       labels:
         app: wedding
     spec:
-      terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 31
       containers:
         - name: wedding
           image: docker.raqeebwedsrabeeta.live:5000/myprojects/wedding
